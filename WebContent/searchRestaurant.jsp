@@ -17,6 +17,8 @@
 
 <script>
 
+var title;
+
 function map(y, x) {
 	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 	var options = { //지도를 생성할 때 필요한 기본 옵션
@@ -118,11 +120,28 @@ var positions = [{
 	        map: map, // 마커를 표시할 지도
 	        position: positions[i].latlng, // 마커를 표시할 위치
 	        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-	        image : markerImage // 마커 이미지 
+	        image : markerImage, // 마커 이미지 
+	        clickable : true
 	    });
+	    (function(m) {
+		    daum.maps.event.addListener(m, 'click', function() {
+		        // 마커 위에 인포윈도우를 표시합니다
+		        title = m.Xd;
+		        console.log(title);
+		        console.log(m);	        
+		    });
+	    })(marker);
+	    
+	    
 	}
 		
+	
 	</script>
+	
+	
+	<a href = "register_restaurant.jsp">맛집 등록하러 가기</a>
+	
+	
 <%
 
 } catch (ClassNotFoundException e) {

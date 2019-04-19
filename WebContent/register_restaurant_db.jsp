@@ -15,7 +15,6 @@
 	Double x = Double.parseDouble(request.getParameter("x"));
 	Double y = Double.parseDouble(request.getParameter("y"));
 	
-	
 
 	try {
 		DBManager db = DBManager.getInstance();

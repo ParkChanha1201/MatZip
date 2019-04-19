@@ -91,7 +91,7 @@
 	</script>
 	
 
-	<form method="post" name = "position" action="register_rest.jsp">
+	<form method="post" name = "position" action="register_restaurant_db.jsp">
 		맛집이름: <input type="text" name="rest_name"> 
 		주소입력: <input type="text" id="address" name="address" onblur="move()"> 
 		<input type = "hidden" name = "x" value = "">
@@ -99,6 +99,7 @@
 		<input type="submit" value="맛집등록" onclick = "move()">
 	</form>
 
+	<a href = "searchRestaurant.jsp">맛집 지도 보러가기</a>
 	
 
 
