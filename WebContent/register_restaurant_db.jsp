@@ -28,7 +28,7 @@
 		
 		stmt.executeUpdate();
 	
-		
+		response.sendRedirect("register_restaurant.jsp");		
 		
 	} catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
@@ -39,3 +39,6 @@
 	}
 
 %>
+
+
+

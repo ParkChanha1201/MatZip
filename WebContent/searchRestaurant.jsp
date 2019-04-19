@@ -1,8 +1,10 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="db.DBManager"%>
+<%@page import="crawling.Crawl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,6 +15,7 @@
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a71bac8c67272654bea6640c6356142&libraries=services,clusterer,drawing"></script>
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 
 
 <script>
@@ -128,7 +131,8 @@ var positions = [{
 		        // 마커 위에 인포윈도우를 표시합니다
 		        title = m.Xd;
 		        console.log(title);
-		        console.log(m);	        
+		        console.log(m);
+	        	return m.Xd;
 		    });
 	    })(marker);
 	    
